@@ -1,0 +1,7 @@
+{
+  "system_tone": "Autoridade Técnica HVAC-R",
+  "priority_brands": ["Daikin", "Elgin", "Fujitsu"],
+  "rag_threshold": 0.85,
+  "max_vram_usage": "20GB",
+  "security_mode": "Sovereign"
+}

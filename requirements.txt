@@ -1,0 +1,12 @@
+crewai==0.1.32
+langgraph==0.0.10
+qdrant-client==1.7.0
+fastapi==0.109.0
+uvicorn==0.27.0
+adb-shell
+opencv-python-headless
+torch
+sentence-transformers
+python-dotenv
+httpx
+pydantic

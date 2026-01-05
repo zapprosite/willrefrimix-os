@@ -1,0 +1,11 @@
+tunnel: antigravity-v2
+credentials-file: /etc/cloudflared/credentials.json
+
+ingress:
+  - hostname: v2.zappro.site
+    service: http://localhost:8001
+  - hostname: api.zappro.site
+    service: http://localhost:8080
+  - hostname: n8n.zappro.site
+    service: http://localhost:5678
+  - service: http_status:404

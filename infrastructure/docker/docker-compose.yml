@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  backend:
+    build: ../../api
+    container_name: antigravity_api
+    restart: always
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - QDRANT_HOST=qdrant
+      - PYTHONPATH=/app:/app/api
+    volumes:
+      - /srv-2/willrefrimix-os:/app
+    networks:
+      - antigravity_mesh
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: memory_qdrant_v2
+    restart: always
+    ports:
+      - "6333:6333"
+    networks:
+      - antigravity_mesh
+
+networks:
+  antigravity_mesh:
+    driver: bridge
